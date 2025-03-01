@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import time
 
-import config
 from const import Constants
 from gpio import Gpio
 from sensor import Sensor
@@ -20,15 +19,15 @@ if __name__ == "__main__":
         safety_counter = 0
         # start water dispence
         while (
-            voltage < config.WATER_SENSOR_LIMIT
-            or safety_counter <= config.WATER_DISPENCE_TIME_SAFETY_LIMIT
+            voltage < constants.WATER_SENSOR_LIMIT
+            or safety_counter <= constants.WATER_DISPENCE_TIME_SAFETY_LIMIT
         ):
             print("water dispence start")
             gpio.on()
-            time.sleep(60 * config.WATER_DISPENCE_TIME)
+            time.sleep(60 * constants.WATER_DISPENCE_TIME)
             print("water dispence rest")
             gpio.off()
-            time.sleep(60 * config.WATER_DISPENCE_REST_TIME)
+            time.sleep(60 * constants.WATER_DISPENCE_REST_TIME)
             voltage = sensor.get_sensor_value_average()
             print("sensor value: %s" % voltage)
             safety_counter += 1
