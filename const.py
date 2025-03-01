@@ -2,6 +2,7 @@
 
 
 class Constants:
+    # For A/D Converter
     @property
     def AD_CONVERTER_PROPS_ANALOG_PIN(self):
         return 0
@@ -26,3 +27,12 @@ class Constants:
             8: 0.512,
             16: 0.256,
         }
+
+    # Coommon
+    @property
+    def WATER_VALVE_PIN_NUMBER(self):
+        return 4
+
+    @property
+    def WATER_SENSOR_LIMIT(self):
+        return 14600.0

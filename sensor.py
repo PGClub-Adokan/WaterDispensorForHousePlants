@@ -11,15 +11,9 @@ class Sensor:
     def __init__(self):
         self._sensor_driver = Adafruit_ADS1x15.ADS1115()
         self.constants = Constants()
-        # self._unit_for_voltage = self._calc_unit_for_voltage(
-        #     const.AD_CONVERTER_PROPS_GAIN
-        # )
         self._unit_for_voltage = self._calc_unit_for_voltage(
             self.constants.AD_CONVERTER_PROPS_GAIN
         )
-        # GPIO.setmode(GPIO.BCM)
-        # GPIO.setup(const.PIN, GPIO.OUT)
-        # GPIO.output(const.PIN, GPIO.HIGH)
 
     def _calc_unit_for_voltage(self, gain):
         return self.constants.AD_CONVERTER_UNIT_FOR_VOLT_BY_GAIN[gain] * 2 / 4.096
