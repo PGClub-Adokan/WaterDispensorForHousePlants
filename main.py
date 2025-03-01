@@ -18,7 +18,10 @@ if __name__ == "__main__":
     try:
         safety_counter = 0
         # start water dispence
-        while voltage < constants.WATER_SENSOR_LIMIT or safety_counter <= 10:
+        while (
+            voltage < constants.WATER_SENSOR_LIMIT
+            or safety_counter <= constants.WATER_DISPENCE_TIME_SAFETY_LIMIT
+        ):
             print("water dispence start")
             gpio.on()
             time.sleep(60 * constants.WATER_DISPENCE_TIME)
