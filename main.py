@@ -21,10 +21,10 @@ if __name__ == "__main__":
         while voltage < constants.WATER_SENSOR_LIMIT or safety_counter <= 10:
             print("water dispence start")
             gpio.on()
-            time.sleep(60 * 1)  # do water dispense 1 minute
+            time.sleep(60 * 3)  # do water dispense 3 minute
             print("water dispence rest")
             gpio.off()
-            time.sleep(60 * 4)  # rest water dispence 4 minute
+            time.sleep(60 * 7)  # rest water dispence 7 minute
             voltage = sensor.get_sensor_value_average()
             print("sensor value: %s" % voltage)
             safety_counter += 1
