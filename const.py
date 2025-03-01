@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+
+
+class Constants:
+    @property
+    def AD_CONVERTER_PROPS_ANALOG_PIN(self):
+        return 0
+
+    @property
+    def AD_CONVERTER_PROPS_GAIN(self):
+        return 1
+
+    # @see https://tech-and-investment.com/raspberrypi2-5-ads1015/
+    #  - 2/3 = +/-6.144V
+    #  -   1 = +/-4.096V
+    #  -   2 = +/-2.048V
+    #  -   4 = +/-1.024V
+    #  -   8 = +/-0.512V
+    #  -  16 = +/-0.256V
+    @property
+    def AD_CONVERTER_UNIT_FOR_VOLT_BY_GAIN(self):
+        return {
+            1: 4.096,
+            2: 2.048,
+            4: 1.024,
+            8: 0.512,
+            16: 0.256,
+        }
