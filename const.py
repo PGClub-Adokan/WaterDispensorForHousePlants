@@ -36,3 +36,11 @@ class Constants:
     @property
     def WATER_SENSOR_LIMIT(self):
         return 14600.0
+
+    @property
+    def GPIO_PIN_MODE_IN(self):
+        return 1
+
+    @property
+    def GPIO_PIN_MODE_OUT(self):
+        return 0

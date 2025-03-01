@@ -28,6 +28,5 @@ class Sensor:
             )
             sensor_value = self._sensor_driver.read_adc(0, 1)
             sensor_values[i] = float(sensor_value) * float(self._unit_for_voltage)
-            print("current voltage: %s" % sensor_values[i])
 
         return numpy.average(sensor_values)
