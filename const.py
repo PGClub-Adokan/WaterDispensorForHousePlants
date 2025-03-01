@@ -38,6 +38,14 @@ class Constants:
         return 14600.0
 
     @property
+    def WATER_DISPENCE_TIME(self):
+        return 5  # minute
+
+    @property
+    def WATER_DISPENCE_REST_TIME(self):
+        return 5  # minute
+
+    @property
     def GPIO_PIN_MODE_IN(self):
         return 1
 
