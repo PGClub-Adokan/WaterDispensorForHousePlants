@@ -31,13 +31,13 @@ class Gpio:
         pass
 
     def on(self):
-        # FIXME Maybe I had miss(create hard ware), send on signal to gpio out, but water dispance stop
+        # FIXME Maybe I had miss(create hard ware), send signal to gpio out, but water dispance stop
         if self._pin_type == GPIO.OUT:
             self._gpio.output(self._pin_no, GPIO.LOW)  # Correctly it's HIGH
         pass
 
     def off(self):
-        # FIXME Maybe I had miss(create hard ware), send on signal to gpio out, but water dispance stop
+        # FIXME Maybe I had miss(create hard ware), send signal to gpio out, but water dispance stop
         if self._pin_type == GPIO.OUT:
             self._gpio.output(self._pin_no, GPIO.HIGH)  # Correctly it's LOW
         pass
